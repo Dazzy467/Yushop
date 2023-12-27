@@ -1,9 +1,9 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('Adminregister') }}">
         @csrf
 
         <div class="flex items-center justify-center">
-            <h3 class="font-sans text-white font-extrabold" style="font-size: 1.5rem;">
+            <h3 class="font-sans text-gray-700 dark:text-white font-extrabold" style="font-size: 1.5rem;">
                 Register Admin
             </h3>
         </div>
