@@ -26,7 +26,7 @@
                     {{ __("You're logged in!") }}
                     {{ Auth::user()->name }}
                 </div>
-                <div class="flex justify-start p-5">
+                <div class="flex justify-center p-5">
                     <div id="userCard" class="rounded px-2 bg-gray-200 dark:bg-gray-950 dark:text-gray-300">
                         <h3 class="font-extrabold">Jumlah User</h3>
                         <div class="flex items-center justify-evenly py-2">
@@ -40,6 +40,24 @@
                         <div class="flex items-center justify-evenly py-2">
                             <i class="fa-solid fa-box" style="font-size: 2rem"></i>
                             <span class="font-extrabold" style="font-size: 2rem">{{ $Barang->count() }}</span>
+                        </div>
+                    </div>
+
+                    <div id="barangCard" class="rounded px-2 bg-gray-200 dark:bg-gray-950 dark:text-gray-300">
+                        <h3 class="font-extrabold">Jumlah Barang Aktif</h3>
+                        @php
+                            $no = 0;
+                        @endphp
+                        @foreach ($Barang as $val)
+                            @if ($val->status === 1)
+                                @php
+                                    $no++;
+                                @endphp 
+                            @endif                           
+                        @endforeach
+                        <div class="flex items-center justify-evenly py-2">
+                            <i class="fa-solid fa-box" style="font-size: 2rem"></i>
+                            <span class="font-extrabold" style="font-size: 2rem">{{ $no }}</span>
                         </div>
                     </div>
                 </div>

@@ -48,9 +48,9 @@
         </div>
 
         <div>
-            <x-input-label for="telp" :value="__('No telp')" />
-            <x-text-input id="telp" name="telp" type="text" class="mt-1 block w-full" :value="old('telp', $user->noTelp)" required autofocus autocomplete="telp" />
-            <x-input-error class="mt-2" :messages="$errors->get('telp')" />
+            <x-input-label for="noTelp" :value="__('No telp')" />
+            <x-text-input id="noTelp" name="noTelp" type="text" class="mt-1 block w-full" :value="old('noTelp', $user->noTelp)" required autofocus autocomplete="noTelp" />
+            <x-input-error class="mt-2" :messages="$errors->get('noTelp')" />
         </div>
 
         <div class="flex items-center gap-4">
